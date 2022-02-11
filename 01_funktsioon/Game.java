@@ -85,3 +85,8 @@ public class Game {
         }
     }
 }
+
+
+//public static double taksosõit(double h){
+    //return 3+0.8*h
+        //}
