@@ -17,17 +17,20 @@ public class Game {
 
         int worldHeight =5;
         int worldWidth =10;
-        int playerCoordinateY =(int) generateRandomCoordinate(worldHeight);
-        int playerCoordinateX =(int) generateRandomCoordinate(worldWidth);
-        int enemyCoordinateY =(int) generateRandomCoordinate(worldHeight);
-        int enemyCoordinateX =(int) generateRandomCoordinate(worldWidth);
+        int playerCoordinateY =generateRandomCoordinate(worldHeight);
+        int playerCoordinateX =generateRandomCoordinate(worldWidth);
+        int enemyCoordinateY =generateRandomCoordinate(worldHeight);
+        int enemyCoordinateX =generateRandomCoordinate(worldWidth);
+
+        printMap(worldHeight,worldWidth,playerCoordinateY,
+                playerCoordinateX,enemyCoordinateY, enemyCoordinateX );
 
         //klasside tegemine tund nr2
         Scanner scanner =new Scanner(System.in);
         String input = scanner.nextLine();
 
 
-        while (input != "end") {
+        while (!input.equals("end")) {
             //kontrollib ühte muutujat mingite väärtuste vastu
             switch (input){
                 case "a":
@@ -36,10 +39,10 @@ public class Game {
                 case "s":
                     playerCoordinateY++;
                     break;
-                case "w":
+                case "d":
                     playerCoordinateX++;
                     break;
-                case "d":
+                case "w":
                     playerCoordinateY--;
                     break;
             }
