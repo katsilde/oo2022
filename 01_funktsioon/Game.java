@@ -24,7 +24,38 @@ public class Game {
 
         //klasside tegemine tund nr2
         Scanner scanner =new Scanner(System.in);
+        String input = scanner.nextLine();
 
+
+        while (input != "end") {
+            //kontrollib ühte muutujat mingite väärtuste vastu
+            switch (input){
+                case "a":
+                    playerCoordinateX--;
+                    break;
+                case "s":
+                    playerCoordinateY++;
+                    break;
+                case "w":
+                    playerCoordinateX++;
+                    break;
+                case "d":
+                    playerCoordinateY--;
+                    break;
+            }
+            printMap(worldHeight, worldWidth, playerCoordinateY,
+                    playerCoordinateX, enemyCoordinateY, playerCoordinateX);
+            input = scanner.nextLine();
+        }
+    }
+    // int sam tüüp mis peab olema fn sees return järgi
+    public static int generateRandomCoordinate(int worldSize ){
+
+        return (int) (Math.random()*(worldSize-2))+1;
+    }
+    public static void printMap(int worldHeight, int worldWidth,
+                                int playerCoordinateY, int playerCoordinateX,
+                                int enemyCoordinateY, int enemyCoordinateX){
         char symbol;  //üks kord deklareerib muutuja
         //fori
         for (int y = 0; y < worldHeight; y++) {
@@ -49,11 +80,5 @@ public class Game {
             System.out.println();
 
         }
-
-    }
-    // int sam tüüp mis peab olema fn sees return järgi
-    public static int generateRandomCoordinate(int worldSize ){
-
-        return (int) (Math.random()*(worldSize-2))+1;
     }
 }
