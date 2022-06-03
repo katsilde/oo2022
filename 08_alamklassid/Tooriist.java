@@ -2,7 +2,7 @@ package kodutoo;
 
 public class Tooriist {
 
-    public void Niida(){
-        System.out.println("Niidan muru");
+    public void Abista(){
+        System.out.println("Aitan tööd teha");
     }
 }
