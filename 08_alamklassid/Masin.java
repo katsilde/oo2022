@@ -2,7 +2,7 @@ package kodutoo;
 
 public class Masin {
 
-    public void Kynna(){
-        System.out.println("Künnan maad");
+    public void Teen_tood(){
+        System.out.println("Teen töö ise ära");
     }
 }
